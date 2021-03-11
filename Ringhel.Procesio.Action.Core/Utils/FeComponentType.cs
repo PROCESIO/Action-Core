@@ -1,4 +1,6 @@
-﻿namespace Ringhel.Procesio.Action.Core.Utils
+﻿using System.ComponentModel;
+
+namespace Ringhel.Procesio.Action.Core.Utils
 {
     public enum FeComponentType
     {
@@ -6,7 +8,7 @@
         Radio = 2,
         Upload_modal = 3,
         Email_modal = 4,
-        Checkbox = 5,
+        Check_box = 5,
         Number = 6,
         Modal = 7,
         DataType = 8,
