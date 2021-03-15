@@ -35,7 +35,7 @@ namespace Ringhel.Procesio.Action.Core.ActionDecorators
         /// <summary>
         /// The property default value converted to String
         /// </summary>
-        public string DefaultValue { get; set; }
+        public object DefaultValue { get; set; }
 
         /// <summary>
         /// 

@@ -12,11 +12,11 @@ namespace Ringhel.Procesio.Action.Core.Models
         /// <summary>
         /// Name that will be displayed for the current option
         /// </summary>
-        public string Name { get; set; }
+        public string name { get; set; }
 
         /// <summary>
         /// The actual value of the current option
         /// </summary>
-        public string Value { get; set; }
+        public object value { get; set; }
     }
 }

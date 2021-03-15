@@ -30,5 +30,10 @@ namespace Ringhel.Procesio.Action.Core.ActionDecorators
         /// Action category
         /// </summary>
         public Classification Classification { get; set; }
+
+        /// <summary>
+        /// Action can be tested with test values.
+        /// </summary>
+        public bool IsTestable { get; set; } = false;
     }
 }

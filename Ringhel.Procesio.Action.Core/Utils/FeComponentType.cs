@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.ComponentModel;
 
 namespace Ringhel.Procesio.Action.Core.Utils
 {
@@ -10,8 +8,24 @@ namespace Ringhel.Procesio.Action.Core.Utils
         Radio = 2,
         Upload_modal = 3,
         Email_modal = 4,
-        Checkbox = 5,
+        Check_box = 5,
         Number = 6,
         Modal = 7,
+        DataType = 8,
+        Button = 9,
+        Side_pannel = 10,
+        Toast = 11,
+        Tabs = 12,
+        Tab = 13,
+        Table = 14,
+        Text_Area = 15,
+        Group_collapsable = 16,
+        Api_EndPoint = 17,
+
+        Verb = 30,
+        Credentials_Rest = 31,
+        Credentials_Db = 32,
+        Credentials_Smtp = 33,
+        Credentials_Ftp = 34,
     }
 }
