@@ -21,6 +21,7 @@ namespace Ringhel.Procesio.Action.Core.Utils
         Text_Area = 15,
         Group_collapsable = 16,
         Api_EndPoint = 17,
+        Tabs_Payload = 18,
 
         Verb = 30,
         Credentials_Rest = 31,
