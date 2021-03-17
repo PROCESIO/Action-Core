@@ -1,6 +1,6 @@
-﻿namespace Ringhel.Procesio.Action.Core.Models
+﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.API
 {
-    public class AuthorizationConfiguration : IAuthorizationConfiguration
+    public class AuthorizationConfiguration 
     {
         public AuthorizationType Type { get; set; }
 
