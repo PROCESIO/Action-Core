@@ -41,5 +41,18 @@ namespace Ringhel.Procesio.Action.Core.ActionDecorators
         /// 
         /// </summary>
         public FeComponentType Type { get; set; }
+
+        /// <summary>
+        /// Property Row number. Used when showing the property in the Action configuration panel.
+        /// If not set, all properties will be placed on the same default row.
+        /// </summary>
+        public int RowId { get; set; } = 0;
+
+        /// <summary>
+        /// Column number. Used when showing the property in the Action configuration panel.
+        /// This is required for properties that are on the same rowId.
+        /// If not set, all properties will be placed on the same default column.
+        /// </summary>
+        public int ColumnId { get; set; } = 0;
     }
 }
