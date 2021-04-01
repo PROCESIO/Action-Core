@@ -6,6 +6,6 @@ namespace Ringhel.Procesio.Action.Core.Models.Credentials.SMTP
     {
         public SMTPCredentialsConfiguration CredentialsConfiguration { get; set; }
 
-        public SmtpClient Client { get; set; }
+        public ISmtpClient Client { get; set; }
     }
 }
