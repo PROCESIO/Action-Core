@@ -9,12 +9,12 @@ namespace Ringhel.Procesio.Action.Core.Models.Credentials.SMTP
         /// <summary>
         /// Sender email address.
         /// </summary>
-        public string UserName { get; set; }
+        public string SenderEmail { get; set; }
 
         /// <summary>
         /// Sender display name
         /// </summary>
-        public string From { get; set; }
+        public string SenderName { get; set; }
 
         /// <summary>
         /// Body message
