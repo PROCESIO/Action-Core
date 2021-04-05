@@ -7,8 +7,14 @@ namespace Ringhel.Procesio.Action.Core.Models.Credentials.SMTP
 {
     public interface ISmtpClient
     {
-        public Task SendEmail();
-
-        public Task<string> GetEmail();
+        public Task SendEmail(
+            string userName,
+            string from,
+            string body, 
+            string subject, 
+            IEnumerable<string> To, 
+            IEnumerable<string> Cc = null, 
+            IEnumerable<string> Bcc = null, 
+            bool IsHtml = false);
     }
 }
