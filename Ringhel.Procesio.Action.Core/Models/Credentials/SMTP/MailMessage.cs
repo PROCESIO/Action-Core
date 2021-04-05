@@ -42,7 +42,7 @@ namespace Ringhel.Procesio.Action.Core.Models.Credentials.SMTP
         public IEnumerable<string> Bcc { get; set; }
 
         /// <summary>
-        /// Type of boyd html/text.
+        /// Type of body html/text.
         /// </summary>
         public bool IsBodyHtml { get; set; }
     }
