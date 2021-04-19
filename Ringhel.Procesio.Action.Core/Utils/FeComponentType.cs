@@ -24,6 +24,7 @@ namespace Ringhel.Procesio.Action.Core.Utils
         Tabs_Payload = 18,
         Text = 19,
         Code_editor = 20,
+        File = 21,
 
         Verb = 30,
         Credentials_Rest = 31,
