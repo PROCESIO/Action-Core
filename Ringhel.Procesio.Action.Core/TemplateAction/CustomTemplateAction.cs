@@ -123,6 +123,10 @@ namespace TestAction
             {
                 _ = file.Name; // this is the file name if required.
                 _ = file.File; // this is the file Stream which can be used to retrieve file content.
+
+                // example of file stream use:
+                using System.IO.Stream fileStream = file.File;
+                _ = fileStream.Length;
             }
 
         }
