@@ -35,5 +35,10 @@ namespace Ringhel.Procesio.Action.Core.ActionDecorators
         /// Action can be tested with test values.
         /// </summary>
         public bool IsTestable { get; set; } = false;
+
+        /// <summary>
+        /// Tooltip property. 
+        /// </summary>
+        public string Tooltip { get; set; }
     }
 }
