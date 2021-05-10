@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TestAction
 {
-    [ClassDecorator(Name = "Custom Template Action", Shape = ActionShape.Circle, Description = "Custom Template Action for adding 2 values", Classification = Classification.cat1)]
+    [ClassDecorator(Name = "Custom Template Action", Shape = ActionShape.Circle, Description = "Custom Template Action for adding 2 values", Classification = Classification.cat1, Tooltip = "Test tooltip on Action")]
     [FEDecorator(Label = "Configuration Modal", Type = FeComponentType.Modal, Parent = "Config_Modal", Tab = "Input Tab", RowId = 1)]
     [FEDecorator(Label = "Configuration Modal", Type = FeComponentType.Side_pannel, Parent = "Side_Panel_Parent", Tab = "Input Tab", RowId = 2)]
     public class MyCustomAction : IAction
@@ -45,7 +45,7 @@ namespace TestAction
         #endregion
 
         #region Properties
-        [FEDecorator(Label = "First number to add", Type = FeComponentType.Select, Tab = "Input Tab", Options = "ConfigP1OptionsList", RowId = 3)]
+        [FEDecorator(Label = "First number to add", Type = FeComponentType.Select, Tab = "Input Tab", Options = "ConfigP1OptionsList", RowId = 3, Tooltip ="Tooltip input1")]
         [BEDecorator(IOProperty = Direction.Input)]
         [Validator(IsRequired = false)]
         public int Input1 { get; set; }
