@@ -8,5 +8,6 @@ namespace Ringhel.Procesio.Action.Core.Utils
     {
         Input = 1,
         Output = 2,
+        InputOutput = 3,
     }
 }
