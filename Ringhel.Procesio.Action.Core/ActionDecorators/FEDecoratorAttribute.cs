@@ -52,5 +52,15 @@ namespace Ringhel.Procesio.Action.Core.ActionDecorators
         /// Tooltip property. 
         /// </summary>
         public string Tooltip { get; set; }
+
+        /// <summary>
+        /// Minimum allowed value of the current type
+        /// </summary>
+        public object Min { get; set; }
+
+        /// <summary>
+        /// Maximum allowed value of the current type
+        /// </summary>
+        public object Max { get; set; }
     }
 }
