@@ -1,9 +1,12 @@
 ﻿namespace Ringhel.Procesio.Action.Core.Utils
 {
+    /// <summary>
+    /// These values are required on Action.Properties database table.
+    /// </summary>
     public enum Direction
     {
-        InputOutput = 0,
+        Output = 0,
         Input = 1,
-        Output = 2,
+        InputOutput = 2,
     }
 }
