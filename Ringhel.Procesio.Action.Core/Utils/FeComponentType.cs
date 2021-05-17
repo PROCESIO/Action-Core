@@ -31,5 +31,7 @@ namespace Ringhel.Procesio.Action.Core.Utils
         Credentials_Db = 32,
         Credentials_Smtp = 33,
         Credentials_Ftp = 34,
+
+        Ignore = 100,
     }
 }
