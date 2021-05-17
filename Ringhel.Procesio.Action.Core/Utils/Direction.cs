@@ -5,8 +5,9 @@
     /// </summary>
     public enum Direction
     {
-        Output = 0,
+        NONE = 0,
         Input = 1,
         InputOutput = 2,
+        Output = 3,
     }
 }
