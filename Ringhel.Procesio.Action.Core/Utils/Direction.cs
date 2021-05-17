@@ -2,8 +2,8 @@
 {
     public enum Direction
     {
-        Output = 0,
+        InputOutput = 0,
         Input = 1,
-        InputOutput = 2,
+        Output = 2,
     }
 }
