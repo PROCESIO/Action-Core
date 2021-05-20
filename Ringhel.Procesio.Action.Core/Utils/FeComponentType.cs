@@ -33,5 +33,6 @@ namespace Ringhel.Procesio.Action.Core.Utils
         Credentials_Ftp = 34,
 
         Ignore = 100,
+        Any = 101,
     }
 }
