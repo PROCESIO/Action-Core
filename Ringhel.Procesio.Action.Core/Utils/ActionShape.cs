@@ -11,5 +11,6 @@ namespace Ringhel.Procesio.Action.Core.Utils
     {
         Square = 1,
         Circle = 2,
+        Diamond = 3,
     }
 }
