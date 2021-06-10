@@ -25,6 +25,8 @@ namespace Ringhel.Procesio.Action.Core.Utils
         Text = 19,
         Code_editor = 20,
         File = 21,
+        Decisional_Case = 22,
+        Decisional_Default = 23,
 
         Verb = 30,
         Credentials_Rest = 31,
