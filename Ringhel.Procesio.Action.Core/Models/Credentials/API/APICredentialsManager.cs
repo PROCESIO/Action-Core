@@ -6,6 +6,6 @@ namespace Ringhel.Procesio.Action.Core.Models.Credentials.API
     {
         public APICredentialsConfiguration CredentialConfig { get; set; }
 
-        public HttpClient Client { get; set; }
+        public IHttpClient Client { get; set; }
     }
 }

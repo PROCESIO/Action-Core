@@ -13,5 +13,7 @@
         public string ApiValue { get; set; }
 
         public ClientApiKeyLocation ApiKeyLocation { get; set; }
+
+        public ClientApiKeyLocation BasicAuthLocation { get; set; }
     }
 }
