@@ -27,6 +27,8 @@ namespace Ringhel.Procesio.Action.Core.Utils
         File = 21,
         Decisional_Case = 22,
         Decisional_Default = 23,
+        Map_Inputs = 24,
+        Flow_List = 25,
 
         Verb = 30,
         Credentials_Rest = 31,
