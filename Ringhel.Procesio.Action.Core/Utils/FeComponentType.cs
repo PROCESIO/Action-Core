@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-namespace Ringhel.Procesio.Action.Core.Utils
+﻿namespace Ringhel.Procesio.Action.Core.Utils
 {
     public enum FeComponentType
     {
@@ -27,6 +25,9 @@ namespace Ringhel.Procesio.Action.Core.Utils
         File = 21,
         Decisional_Case = 22,
         Decisional_Default = 23,
+        Map_Inputs = 24,
+        Flow_List = 25,
+        Column_Definition = 26,
 
         Verb = 30,
         Credentials_Rest = 31,
