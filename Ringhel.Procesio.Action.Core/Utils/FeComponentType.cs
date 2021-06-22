@@ -25,15 +25,17 @@
         File = 21,
         Decisional_Case = 22,
         Decisional_Default = 23,
-        Map_Inputs = 24,
-        Flow_List = 25,
-        Column_Definition = 26,
+        Flow_List = 24,
+        Column_Definition = 25,
 
         Verb = 30,
         Credentials_Rest = 31,
         Credentials_Db = 32,
         Credentials_Smtp = 33,
         Credentials_Ftp = 34,
+
+        Process_Inputs = 35,
+        Process_Outputs = 36,
 
         Ignore = 100,
         Any = 101,
