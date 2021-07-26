@@ -10,6 +10,8 @@
 
         public string Password { get; set; }
 
+        public string From { get; set; }
+
         public EncryptionTypes EncryptionType { get; set; }
 
         public MailDirectionTypes MailDirection { get; set; }
