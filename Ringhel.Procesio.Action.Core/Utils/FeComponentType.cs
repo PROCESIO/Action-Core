@@ -27,6 +27,9 @@
         Decisional_Default = 23,
         Flow_List = 24,
         Column_Definition = 25,
+        Delay_Radio_Type = 26,
+        Delay_Definition = 27,
+
 
         Verb = 30,
         Credentials_Rest = 31,
