@@ -39,6 +39,7 @@
 
         Process_Inputs = 35,
         Process_Outputs = 36,
+        Map_Process_Data = 37,
 
         Ignore = 100,
         Any = 101,
