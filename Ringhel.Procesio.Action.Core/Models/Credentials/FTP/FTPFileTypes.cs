@@ -3,7 +3,6 @@
     public enum FTPFileTypes
     {
         Files = 1,
-        Folders = 2,
-        FilesAndFolders = 3
+        Folders = 2
     }
 }
