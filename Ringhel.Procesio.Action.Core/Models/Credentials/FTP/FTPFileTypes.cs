@@ -2,7 +2,7 @@
 {
     public enum FTPFileTypes
     {
-        File = 1,
-        Directory = 2
+        Files = 1,
+        Folders = 2
     }
 }
