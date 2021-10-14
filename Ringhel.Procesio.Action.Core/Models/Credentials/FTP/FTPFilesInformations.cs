@@ -1,10 +1,19 @@
-﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.FTP
+﻿using Newtonsoft.Json;
+
+namespace Ringhel.Procesio.Action.Core.Models.Credentials.FTP
 {
     public class FTPFilesInformations
     {
-        public string Path { get; set; }
+        [JsonProperty("size")]
+        public int Size { get; set; }
+
+        [JsonProperty("name")]
         public string Name { get; set; }
+
+        [JsonProperty("type")]
         public string Type { get; set; }
-        public long Size { get; set; }
+
+        [JsonProperty("path")]
+        public string Path { get; set; }
     }
 }
