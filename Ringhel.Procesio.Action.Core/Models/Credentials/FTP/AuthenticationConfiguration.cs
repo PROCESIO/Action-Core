@@ -4,7 +4,7 @@
     {
         public string UserName { get; set; }
         public string Password { get; set; }
-        public CertificateStorageCore Key { get; set; }
+        public string Key { get; set; }
         public string KeyPassphrase { get; set; }
         public string KeyUsername { get; set; }
     }
