@@ -5,8 +5,10 @@ namespace Ringhel.Procesio.Action.Core.Models
 {
     public class FileModel
     {
-        public Stream File { get; }
-        public string Name { get; }
+        public Stream File { get; set; }
+        public string Name { get; set; }
+
+        public FileModel() {}
 
         public FileModel(Stream file, string name)
         {
