@@ -24,7 +24,7 @@ namespace Ringhel.Procesio.Action.Core.Models
             Name = name;
         }
 
-        public FileModel Clone()
+        private FileModel Clone()
         {
             File.Seek(0, SeekOrigin.Begin);
             return new FileModel(File, Name);
