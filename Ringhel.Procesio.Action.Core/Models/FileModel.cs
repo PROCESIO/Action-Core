@@ -12,8 +12,9 @@ namespace Ringhel.Procesio.Action.Core.Models
 
         public FileModel(Stream file, string name)
         {
-            MemoryStream memoryStream = new MemoryStream();
-            using (Stream responseStream = file)
+            var memoryStream = new MemoryStream();
+            file.Seek(0, SeekOrigin.Begin);
+            using (var responseStream = file)
             {
                 responseStream.CopyTo(memoryStream);
                 Console.WriteLine($"File stream has length of: {memoryStream.Length}");
@@ -21,6 +22,11 @@ namespace Ringhel.Procesio.Action.Core.Models
 
             File = memoryStream;
             Name = name;
+        }
+
+        public FileModel Clone()
+        {
+            return new FileModel(File, Name);
         }
     }
 }
