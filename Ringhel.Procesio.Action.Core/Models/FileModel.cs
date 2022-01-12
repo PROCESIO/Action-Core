@@ -13,7 +13,6 @@ namespace Ringhel.Procesio.Action.Core.Models
         public FileModel(Stream file, string name)
         {
             var memoryStream = new MemoryStream();
-            file.Seek(0, SeekOrigin.Begin);
             using (var responseStream = file)
             {
                 responseStream.CopyTo(memoryStream);
