@@ -43,6 +43,11 @@ namespace Ringhel.Procesio.Action.Core.ActionDecorators
         public FeComponentType Type { get; set; }
 
         /// <summary>
+        /// Set different text formats: SQL, JSON, PLAINTEXT, etc.
+        /// </summary>
+        public FeTextFormat TextFormat { get; set; } = FeTextFormat.PLAINTEXT;
+
+        /// <summary>
         /// Property Row number. Used when showing the property in the Action configuration panel.
         /// If not set, all properties will be placed on the same default row.
         /// </summary>
