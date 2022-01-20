@@ -45,7 +45,7 @@ namespace Ringhel.Procesio.Action.Core.ActionDecorators
         /// <summary>
         /// Set different text formats: SQL, JSON, PLAINTEXT, etc.
         /// </summary>
-        public FeTextFormat TextFormat { get; set; } = FeTextFormat.PLAINTEXT;
+        public FeTextFormat TextFormat { get; set; } = FeTextFormat.NONE;
 
         /// <summary>
         /// Property Row number. Used when showing the property in the Action configuration panel.
