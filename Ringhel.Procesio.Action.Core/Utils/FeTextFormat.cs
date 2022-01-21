@@ -5,6 +5,7 @@
         NONE = 0,
         PLAIN_TEXT = 1,
         JSON = 2,
-        SQL = 3
+        SQL = 3,
+        HTML = 4,
     }
 }
