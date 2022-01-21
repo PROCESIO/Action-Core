@@ -3,7 +3,7 @@
     public enum FeTextFormat
     {
         NONE = 0,
-        PLAIN_TEXT = 1,
+        PLAINTEXT = 1,
         JSON = 2,
         SQL = 3,
         HTML = 4,
