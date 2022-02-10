@@ -33,8 +33,9 @@ namespace Ringhel.Procesio.Action.Core.Models.Credentials.API
         /// <param name="queryParameters">Query parameters</param>
         /// <param name="headerParameters">Header parameters</param>
         /// <param name="body">Payload</param>
+        /// <param name="httpContentType"></param>
         /// <returns></returns>
-        Task<HttpResponseMessage> PutAsync(string endpoint, Dictionary<string, string> queryParameters, Dictionary<string, string> headerParameters, object body);
+        Task<HttpResponseMessage> PutAsync(string endpoint, Dictionary<string, string> queryParameters, Dictionary<string, string> headerParameters, object body, HttpContentType httpContentType = HttpContentType.Json);
 
         /// <summary>
         /// Post method.
@@ -43,8 +44,9 @@ namespace Ringhel.Procesio.Action.Core.Models.Credentials.API
         /// <param name="queryParameters">Query parameters</param>
         /// <param name="headerParameters">Header parameters</param>
         /// <param name="body">Payload</param>
+        /// <param name="httpContentType"></param>
         /// <returns></returns>
-        Task<HttpResponseMessage> PostAsync(string endpoint, Dictionary<string, string> queryParameters, Dictionary<string, string> headerParameters, object body);
+        Task<HttpResponseMessage> PostAsync(string endpoint, Dictionary<string, string> queryParameters, Dictionary<string, string> headerParameters, object body, HttpContentType httpContentType = HttpContentType.Json);
 
         /// <summary>
         /// Patch method.
@@ -53,7 +55,8 @@ namespace Ringhel.Procesio.Action.Core.Models.Credentials.API
         /// <param name="queryParameters">Query parameters</param>
         /// <param name="headerParameters">Header parameters</param>
         /// <param name="body">Payload</param>
+        /// <param name="httpContentType"></param>
         /// <returns></returns>
-        Task<HttpResponseMessage> PatchAsync(string endpoint, Dictionary<string, string> queryParameters, Dictionary<string, string> headerParameters, object body);
+        Task<HttpResponseMessage> PatchAsync(string endpoint, Dictionary<string, string> queryParameters, Dictionary<string, string> headerParameters, object body, HttpContentType httpContentType = HttpContentType.Json);
     }
 }
