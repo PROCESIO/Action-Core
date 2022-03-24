@@ -67,12 +67,12 @@ namespace Ringhel.Procesio.Action.Core.ActionDecorators
         /// Maximum allowed value of the current type
         /// </summary>
         public object Max { get; set; }
-
+        
         /// <summary>
         /// If the property is of type Custom_Credential,
-        /// we have to add a name for it.
-        /// If not, it will fail
+        /// we have to add its Type Guid.
+        /// The Guid can be taken from the panel when creating an instance of the CustomCredentialType
         /// </summary>
-        public string CustomCredentialsName { get; set; }
+        public string CustomCredentialsTypeGuid { get; set; }
     }
 }
