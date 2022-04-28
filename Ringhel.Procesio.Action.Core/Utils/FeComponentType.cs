@@ -1,4 +1,5 @@
-﻿namespace Ringhel.Procesio.Action.Core.Utils
+﻿// ReSharper disable InconsistentNaming
+namespace Ringhel.Procesio.Action.Core.Utils
 {
     public enum FeComponentType
     {
@@ -31,7 +32,6 @@
         Delay_Definition = 27,
         Date_Time = 28,
 
-
         Verb = 30,
         Credentials_Rest = 31,
         Credentials_Db = 32,
@@ -41,6 +41,11 @@
         Process_Inputs = 35,
         Process_Outputs = 36,
         Map_Process_Data = 37,
+
+        Document_Mapper = 38,
+        Document_Select = 39,
+
+        Credentials_Custom = 40,
 
         Ignore = 100,
         Any = 101,
