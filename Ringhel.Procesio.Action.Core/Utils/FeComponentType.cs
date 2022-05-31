@@ -31,6 +31,7 @@ namespace Ringhel.Procesio.Action.Core.Utils
         Delay_Radio_Type = 26,
         Delay_Definition = 27,
         Date_Time = 28,
+        Tabs_Payload_v2 = 29,
 
         Verb = 30,
         Credentials_Rest = 31,
