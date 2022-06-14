@@ -9,6 +9,6 @@ namespace Ringhel.Procesio.Action.Core.Models.CallApi
         [JsonProperty("value")]
         public object Value { get; set; }
         [JsonProperty("enabled")]
-        public bool IsEnabled { get; set; }
+        public bool IsEnabled { get; set; } = true;
     }
 }
