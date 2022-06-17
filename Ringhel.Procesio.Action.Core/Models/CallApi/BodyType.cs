@@ -5,7 +5,7 @@
         NONE = 0,
         BINARY = 1,
         FORM_DATA = 2,
-        FORM_URL_ENCODED = 3,
+        X_WWW_FORM_URLENCODED = 3,
         RAW = 4,
     }
 }
