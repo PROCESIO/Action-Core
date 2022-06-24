@@ -7,5 +7,6 @@
         JSON = 2,
         SQL = 3,
         HTML = 4,
+        JAVASCRIPT = 5
     }
 }
