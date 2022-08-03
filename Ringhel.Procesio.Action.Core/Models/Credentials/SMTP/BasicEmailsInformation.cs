@@ -6,7 +6,7 @@ namespace Ringhel.Procesio.Action.Core.Models.Credentials.SMTP
     public class BasicEmailInformation
     {
         public int Id { get; set; }
-        public List<Guid?> FileIds { get; set; } = new List<Guid?>();
+        public List<int> FileIndexes { get; set; } = new List<int>();
         public string Subject { get; set; }
         public string To { get; set; }
         public string Cc { get; set; }

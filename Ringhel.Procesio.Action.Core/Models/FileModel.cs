@@ -8,11 +8,10 @@ namespace Ringhel.Procesio.Action.Core.Models
         public Stream File { get; set; }
         public string Name { get; set; }
         public string Hash { get; set; }
-        public Guid? Id { get; set; }
 
         public FileModel() {}
 
-        public FileModel(Stream file, string name, string hash = null, Guid? id = null)
+        public FileModel(Stream file, string name, string hash = null)
         {
             var memoryStream = new MemoryStream();
             using (var responseStream = file)
@@ -24,13 +23,12 @@ namespace Ringhel.Procesio.Action.Core.Models
             File = memoryStream;
             Name = name;
             Hash = hash;
-            Id = id;
         }
 
         public FileModel Clone()
         {
             File.Seek(0, SeekOrigin.Begin);
-            return new FileModel(File, Name, Hash, Id);
+            return new FileModel(File, Name, Hash);
         }
     }
 }
