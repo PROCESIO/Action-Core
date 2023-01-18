@@ -61,5 +61,11 @@ namespace Ringhel.Procesio.Action.Core.Models.Credentials.API
         /// <param name="httpContentType"></param>
         /// <returns></returns>
         Task<HttpResponseMessage> PatchAsync(string endpoint, Dictionary<string, string> queryParameters, Dictionary<string, string> headerParameters, object body, object files = null, HttpContentType httpContentType = HttpContentType.Json);
+
+        /// <summary>
+        /// Set custom TimeOut for the HttpClient.
+        /// </summary>
+        /// <param name="secondsTimeOut"></param>
+        void SetTimeOut(int secondsTimeOut);
     }
 }
