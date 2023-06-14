@@ -13,6 +13,7 @@ public interface IHttpClient
     /// <param name="queryParameters">Query parameters</param>
     /// <param name="headerParameters">Header parameters</param>
     /// <param name="body">Payload</param>
+    /// <param name="files">Files Payload</param>
     /// <param name="httpContentType">Content Type</param>
     /// <returns>Response</returns>
     Task<HttpResponseMessage> GetAsync(
@@ -20,6 +21,7 @@ public interface IHttpClient
         Dictionary<string, string> queryParameters,
         Dictionary<string, string> headerParameters,
         object body = null,
+        object files = null,
         HttpContentType httpContentType = HttpContentType.Json);
 
     /// <summary>
@@ -29,6 +31,7 @@ public interface IHttpClient
     /// <param name="queryParameters">Query parameters</param>
     /// <param name="headerParameters">Header parameters</param>
     /// <param name="body">Payload</param>
+    /// <param name="files">Files Payload</param>
     /// <param name="httpContentType">Content Type</param>
     /// <returns>Response</returns>
     Task<HttpResponseMessage> DeleteAsync(
@@ -36,6 +39,7 @@ public interface IHttpClient
         Dictionary<string, string> queryParameters,
         Dictionary<string, string> headerParameters,
         object body = null,
+        object files = null,
         HttpContentType httpContentType = HttpContentType.Json);
 
     /// <summary>
