@@ -49,6 +49,8 @@ namespace Ringhel.Procesio.Action.Core.Utils
         Credentials_Custom = 40,
         Credentials_Smtp_Inbound = 41,
 
+        Form_Template = 42,
+
         Ignore = 100,
         Any = 101,
     }
