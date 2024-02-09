@@ -1,20 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
 		<PackageId>Ringhel.Procesio.Action.Core</PackageId>
 		<Authors>Ringhel</Authors>
 		<Company>Ringhel</Company>
 		<Product>Procesio</Product>
 		<RepositoryUrl>https://github.com/PROCESIO/Action-Core.git</RepositoryUrl>
-		<Version>1.16.0.4</Version>
+		<Version>1.21.0</Version>
 		<AssemblyName>Ringhel.Procesio.Action.Core</AssemblyName>
 		<PackageId>Ringhel.Procesio.Action.Core</PackageId>
 		<RootNamespace>Ringhel.Procesio.Action.Core</RootNamespace>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 
 </Project>

@@ -1,6 +1,4 @@
-﻿using System.Net.Mail;
-
-namespace Ringhel.Procesio.Action.Core.Models.Credentials.SMTP
+﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.SMTP
 {
     public class SMTPCredentialsManager
     {

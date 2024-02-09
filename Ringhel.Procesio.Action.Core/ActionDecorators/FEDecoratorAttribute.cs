@@ -43,6 +43,11 @@ namespace Ringhel.Procesio.Action.Core.ActionDecorators
         public FeComponentType Type { get; set; }
 
         /// <summary>
+        /// Set different text formats: SQL, JSON, PLAINTEXT, etc.
+        /// </summary>
+        public FeTextFormat TextFormat { get; set; } = FeTextFormat.NONE;
+
+        /// <summary>
         /// Property Row number. Used when showing the property in the Action configuration panel.
         /// If not set, all properties will be placed on the same default row.
         /// </summary>
@@ -62,5 +67,12 @@ namespace Ringhel.Procesio.Action.Core.ActionDecorators
         /// Maximum allowed value of the current type
         /// </summary>
         public object Max { get; set; }
+        
+        /// <summary>
+        /// If the property is of type Custom_Credential,
+        /// we have to add its Type Guid.
+        /// The Guid can be taken from the panel when creating an instance of the CustomCredentialType
+        /// </summary>
+        public string CustomCredentialsTypeGuid { get; set; }
     }
 }

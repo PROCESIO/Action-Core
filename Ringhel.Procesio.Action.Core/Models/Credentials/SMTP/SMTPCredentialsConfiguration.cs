@@ -14,8 +14,6 @@
 
         public EncryptionTypes EncryptionType { get; set; }
 
-        public MailDirectionTypes MailDirection { get; set; }
-
         public MailClientTypes Protocol { get; set; }
     }
 }
