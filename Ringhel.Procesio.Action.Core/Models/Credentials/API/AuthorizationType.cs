@@ -8,5 +8,6 @@
         BasicAuth = 4,
         OAuth10 = 5,
         OAuth20 = 6,
+        Certificate = 7
     }
 }
