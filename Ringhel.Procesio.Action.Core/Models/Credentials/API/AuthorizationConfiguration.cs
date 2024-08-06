@@ -17,4 +17,7 @@ public class AuthorizationConfiguration
     public ClientApiKeyLocation ApiKeyLocation { get; set; }
 
     public ClientApiKeyLocation BasicAuthLocation { get; set; }
+
+    public string CertificateFile { get; set; }
+    public string CertificatePassword { get; set; }
 }
