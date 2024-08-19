@@ -9,6 +9,7 @@
         Task<FileModel> DownloadFile(string folder, string fileName);
         Task<List<FtpFileResult>> DownloadFiles(List<FTPFilesInformations> files);
         Task<bool> UploadFile(FileModel file, string folder);
+        Task<List<FtpFileResult>> UploadFiles(List<FileModel> files, string folder);
         Task<bool> CreateFolder(string folderPath, string folderName);
         Task<bool> DeleteFolder(string folderPath, string folderName);
     }
