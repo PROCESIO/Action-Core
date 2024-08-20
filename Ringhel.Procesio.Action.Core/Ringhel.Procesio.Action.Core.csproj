@@ -8,7 +8,7 @@
 		<Company>Ringhel</Company>
 		<Product>Procesio</Product>
 		<RepositoryUrl>https://github.com/PROCESIO/Action-Core.git</RepositoryUrl>
-		<Version>1.28.0</Version>
+		<Version>1.29.0</Version>
 		<AssemblyName>Ringhel.Procesio.Action.Core</AssemblyName>
 		<PackageId>Ringhel.Procesio.Action.Core</PackageId>
 		<RootNamespace>Ringhel.Procesio.Action.Core</RootNamespace>
