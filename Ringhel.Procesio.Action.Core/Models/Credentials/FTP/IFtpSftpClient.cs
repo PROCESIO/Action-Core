@@ -9,7 +9,7 @@
         Task<FileModel> DownloadFile(string folder, string fileName);
         Task<List<FtpFileResult>> DownloadFiles(List<FTPFilesInformations> files, int numberOfParallelRuns);
         Task<bool> UploadFile(FileModel file, string folder);
-        Task<List<FtpFileResult>> UploadFiles(List<FileModel> files, string folder);
+        Task<List<FtpFileResult>> UploadFiles(List<FileModel> files, string folder, int numberOfParallelRuns);
         Task<bool> CreateFolder(string folderPath, string folderName);
         Task<bool> DeleteFolder(string folderPath, string folderName);
     }
