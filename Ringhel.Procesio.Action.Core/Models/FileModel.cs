@@ -17,7 +17,6 @@ namespace Ringhel.Procesio.Action.Core.Models
             using (var responseStream = file)
             {
                 responseStream.CopyTo(memoryStream);
-                Console.WriteLine($"File stream has length of: {memoryStream.Length}");
             }
 
             File = memoryStream;
