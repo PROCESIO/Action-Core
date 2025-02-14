@@ -2,7 +2,7 @@ name: .NET Core
 
 on:
   pull_request:
-    branches: [ development ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -24,6 +24,6 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Debug --no-restore
+      run: dotnet build --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
