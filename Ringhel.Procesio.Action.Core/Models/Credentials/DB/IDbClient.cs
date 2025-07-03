@@ -18,12 +18,12 @@ namespace Ringhel.Procesio.Action.Core.Models
         /// Examples: COUNT, INSERT, UPDATE, ...
         /// </summary>
         /// <returns></returns>
-        Task<int> ExecuteCommand(string dbQuery, object[] parameters = null);
+        Task<int> ExecuteCommand(string dbQuery, object parameters = null);
         /// <summary>
         /// Execute a command that will return an int in a specified amount of time
         /// Examples: COUNT, INSERT, UPDATE, ...
         /// </summary>
         /// <returns></returns>
-        Task<int> ExecuteCommand(string dbQuery, int timeout, object[] parameters = null);
+        Task<int> ExecuteCommand(string dbQuery, int timeout, object parameters = null);
     }
 }
