@@ -7,11 +7,11 @@ namespace Ringhel.Procesio.Action.Core.Models
         /// <summary>
         /// Execute a query that will return a list
         /// </summary>
-        Task<DataSet> ExecuteQuery(string dbQuery);
+        Task<DataSet> ExecuteQuery(string dbQuery, object parameters = null);
         /// <summary>
         /// Execute a query that will return a list in a specified amount of time
         /// </summary>
-        Task<DataSet> ExecuteQuery(string dbQuery, int timeout);
+        Task<DataSet> ExecuteQuery(string dbQuery, int timeout, object parameters = null);
 
         /// <summary>
         /// Execute a command that will return an int
