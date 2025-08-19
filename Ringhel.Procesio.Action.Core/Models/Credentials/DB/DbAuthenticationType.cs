@@ -1,7 +1,6 @@
-﻿namespace Ringhel.Procesio.Action.Core.Models
+﻿namespace Ringhel.Procesio.Action.Core.Models;
+
+public enum DbAuthenticationType
 {
-    public enum DbAuthenticationType
-    {
-        CredentialsAuthentication = 1
-    }
+    CredentialsAuthentication = 1
 }

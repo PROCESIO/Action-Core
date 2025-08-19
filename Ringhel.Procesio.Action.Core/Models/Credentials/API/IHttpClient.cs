@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Net.Http;
-using System.Threading.Tasks;
-
-namespace Ringhel.Procesio.Action.Core.Models.Credentials.API;
+﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.API;
 
 public interface IHttpClient
 {

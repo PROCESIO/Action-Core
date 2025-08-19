@@ -1,33 +1,29 @@
-﻿using System;
-using System.IO;
+﻿namespace Ringhel.Procesio.Action.Core.Models;
 
-namespace Ringhel.Procesio.Action.Core.Models
+public class FileModel
 {
-    public class FileModel
+    public Stream File { get; set; }
+    public string Name { get; set; }
+    public string Hash { get; set; }
+
+    public FileModel() { }
+
+    public FileModel(Stream file, string name, string hash = null)
     {
-        public Stream File { get; set; }
-        public string Name { get; set; }
-        public string Hash { get; set; }
-
-        public FileModel() {}
-
-        public FileModel(Stream file, string name, string hash = null)
+        var memoryStream = new MemoryStream();
+        using (var responseStream = file)
         {
-            var memoryStream = new MemoryStream();
-            using (var responseStream = file)
-            {
-                responseStream.CopyTo(memoryStream);
-            }
-
-            File = memoryStream;
-            Name = name;
-            Hash = hash;
+            responseStream.CopyTo(memoryStream);
         }
 
-        public FileModel Clone()
-        {
-            File.Seek(0, SeekOrigin.Begin);
-            return new FileModel(File, Name, Hash);
-        }
+        File = memoryStream;
+        Name = name;
+        Hash = hash;
+    }
+
+    public FileModel Clone()
+    {
+        File.Seek(0, SeekOrigin.Begin);
+        return new FileModel(File, Name, Hash);
     }
 }

@@ -1,9 +1,8 @@
-﻿namespace Ringhel.Procesio.Action.Core.Models.CallApi
+﻿namespace Ringhel.Procesio.Action.Core.Models.CallApi;
+
+public enum FormDataType
 {
-    public enum FormDataType
-    {
-        NONE = 0,
-        TEXT = 1,
-        FILE = 2,
-    }
+    NONE = 0,
+    TEXT = 1,
+    FILE = 2,
 }

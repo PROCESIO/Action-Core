@@ -6,5 +6,5 @@ public class FileContent
     public string MimeType { get; set; }
     public string Content { get; set; }
 
-    public FileContent() {}
+    public FileContent() { }
 }
