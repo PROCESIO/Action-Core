@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Ringhel.Procesio.Action.Core;
 
-namespace Ringhel.Procesio.Action.Core
+public interface IAction
 {
-    public interface IAction
-    {
-        Task Execute();
-    }
+    Task Execute();
 }
