@@ -3,13 +3,13 @@ using Ringhel.Procesio.Action.Core.Models;
 namespace Ringhel.Procesio.Action.Core;
 
 /// <summary>
-/// Interface for connector actions that support design-time execution
+/// Interface for connector actions that support runtime execution
 /// and incremental step functionality
 /// </summary>
 public interface IConnectorAction : IAction
 {
     /// <summary>
-    /// Executes a specific connector method at design time
+    /// Executes a specific connector method at runtime
     /// This is called when control values change and need to trigger 
     /// dynamic behavior like populating dropdowns
     /// </summary>

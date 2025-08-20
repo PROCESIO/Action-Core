@@ -3,7 +3,7 @@ using Ringhel.Procesio.Action.Core.ActionDecorators;
 using Ringhel.Procesio.Action.Core.Models;
 using Ringhel.Procesio.Action.Core.Utils;
 
-namespace TestAction;
+namespace Ringhel.Procesio.Action.Core.TemplateAction;
 
 [ClassDecorator(Name = "Custom Template Action", Shape = ActionShape.Circle, Description = "Custom Template Action for adding 2 values", Classification = Classification.cat1, Tooltip = "Test tooltip on Action")]
 [FEDecorator(Label = "Configuration Modal", Type = FeComponentType.Modal, Parent = "Config_Modal", Tab = "Input Tab", RowId = 1)]
@@ -108,7 +108,7 @@ public class MyCustomAction : IAction
         Output1 = Input1 + Input2;
 
         // Use of numeric list:
-        int result = 0;
+        var result = 0;
         foreach (var inputValue in InputList)
         {
             result += inputValue;
@@ -122,10 +122,9 @@ public class MyCustomAction : IAction
             _ = file.File; // this is the file Stream which can be used to retrieve file content.
 
             // example of file stream use:
-            using Stream fileStream = file.File;
+            using var fileStream = file.File;
             _ = fileStream.Length;
         }
-
     }
     #endregion
 }
