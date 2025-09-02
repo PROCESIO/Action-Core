@@ -19,14 +19,14 @@ public class OnEmitControlChangeHandlerAttribute : Attribute
     public string[] InputControls { get; set; } = Array.Empty<string>();
 
     /// <summary>
-    /// The target output control property name that will receive the result
+    /// Array of target output control property names that will receive results
     /// </summary>
-    public string OutputControl { get; set; } = string.Empty;
+    public string[] OutputControls { get; set; } = Array.Empty<string>();
 
     /// <summary>
-    /// Optional tab identifier for better organization
+    /// The control property name that will be triggered when this method finishes execution
     /// </summary>
-    public string Tab { get; set; } = string.Empty;
+    public string OutputTarget { get; set; } = string.Empty;
 
     /// <summary>
     /// Optional description of what this handler does
