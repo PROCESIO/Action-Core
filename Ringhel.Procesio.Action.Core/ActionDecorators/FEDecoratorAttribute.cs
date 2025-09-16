@@ -66,19 +66,8 @@ public class FEDecoratorAttribute : Attribute
     public object Max { get; set; }
 
     /// <summary>
-    /// If the property is of type Custom_Credential,
-    /// we have to add its Type Guid.
+    /// If the property is of type Custom_Credential, we have to add its Type Guid.
     /// The Guid can be taken from the panel when creating an instance of the CustomCredentialType
     /// </summary>
     public string CustomCredentialsTypeGuid { get; set; }
-
-    /// <summary>
-    /// Indicates whether this control should emit events when its value changes at design time
-    /// </summary>
-    public bool EmitControlChange { get; set; } = false;
-
-    /// <summary>
-    /// List of input property names to be sent with the control change event
-    /// </summary>
-    public string[] EmitInputs { get; set; } = Array.Empty<string>();
 }
