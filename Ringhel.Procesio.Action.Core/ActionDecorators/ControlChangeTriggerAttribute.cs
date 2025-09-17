@@ -1,41 +1,43 @@
+using Ringhel.Procesio.Action.Core.Utils;
+
 namespace Ringhel.Procesio.Action.Core.ActionDecorators;
 
 /// <summary>
-/// Attribute used to mark methods that should be executed at design time
-/// when specific control values change
+/// Marks a method to be executed at design time when a specific control's value changes.
 /// </summary>
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
 public class ControlChangeTriggerAttribute : Attribute
 {
     /// <summary>
-    /// The property name that triggers this method when its value changes.
+    /// The property name whose value change triggers this method.
     /// </summary>
     public string TriggerControl { get; set; } = string.Empty;
 
     /// <summary>
-    /// Array of input property names that are used inside the method.
-    /// The input values will be passed for these properties before method execution.
+    /// Array of input property names that the method depends on.
+    /// Their values will be populated before execution.
     /// </summary>
     public string[] InputControls { get; set; } = Array.Empty<string>();
 
     /// <summary>
-    /// Array of output property names that will receive results from method execution.
+    /// Array of output property names that will receive results produced by the method.
     /// </summary>
     public string[] OutputControls { get; set; } = Array.Empty<string>();
 
     /// <summary>
-    /// The output property name that will be triggered when this method finishes execution.
+    /// Declares the semantic type of UI update produced.
+    /// This guides the front end in choosing the correct refresh strategy.
     /// </summary>
-    public string NextControl { get; set; } = string.Empty;
+    public OutputTarget OutputTarget { get; set; } = OutputTarget.None;
 
     /// <summary>
-    /// Optional description of what this handler does.
+    /// Optional description of the handler's purpose.
     /// </summary>
     public string Description { get; set; } = string.Empty;
 
     /// <summary>
-    /// Optional execution order (lower runs earlier). Defaults to 0.
-    /// When multiple methods share the same TriggerControl, execution considers Order value.
+    /// Optional execution ordering. Lower values run earlier. Defaults to 0.
+    /// Recommended when multiple handlers share the same <see cref="TriggerControl"/>.
     /// </summary>
     public int Order { get; set; } = 0;
 }
