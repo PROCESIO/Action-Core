@@ -6,8 +6,13 @@ namespace Ringhel.Procesio.Action.Core.ActionDecorators;
 /// Marks a method to be executed at design time when a specific control's value changes.
 /// </summary>
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
-public class ControlChangeTriggerAttribute : Attribute
+public class ControlEventHandlerAttribute : Attribute
 {
+    /// <summary>
+    /// The type of event associated with this method execution.
+    /// </summary>
+    public ControlEventType EventType { get; set; } = ControlEventType.OnChange;
+
     /// <summary>
     /// The property name whose value change triggers this method.
     /// </summary>
