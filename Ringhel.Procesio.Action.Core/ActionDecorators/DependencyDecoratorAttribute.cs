@@ -9,12 +9,12 @@ namespace Ringhel.Procesio.Action.Core.ActionDecorators;
 public class DependencyDecoratorAttribute : Attribute
 {
     /// <summary>
-    /// The tab ID where the dependency control resides
+    /// The tab name where the dependency control resides
     /// </summary>
     public string Tab { get; set; }
 
     /// <summary>
-    /// The ID of the dependency control
+    /// The name of the dependency control
     /// </summary>
     public string Control { get; set; }
 
