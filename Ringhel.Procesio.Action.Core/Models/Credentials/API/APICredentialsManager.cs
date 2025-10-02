@@ -1,11 +1,8 @@
-﻿using System.Net.Http;
+﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.API;
 
-namespace Ringhel.Procesio.Action.Core.Models.Credentials.API
+public class APICredentialsManager
 {
-    public class APICredentialsManager
-    {
-        public APICredentialsConfiguration CredentialConfig { get; set; }
+    public APICredentialsConfiguration CredentialConfig { get; set; }
 
-        public IHttpClient Client { get; set; }
-    }
+    public IHttpClient Client { get; set; }
 }

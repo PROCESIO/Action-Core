@@ -1,11 +1,8 @@
-﻿using System.Data.Common;
+﻿namespace Ringhel.Procesio.Action.Core.Models;
 
-namespace Ringhel.Procesio.Action.Core.Models
+public class DbCredentialsManager
 {
-    public class DbCredentialsManager
-    {
-        public DbCredentialsConfiguration CredentialsConfiguration { get; set; }
+    public DbCredentialsConfiguration CredentialsConfiguration { get; set; }
 
-        public IDbClient Client { get; set; }
-    }
+    public IDbClient Client { get; set; }
 }

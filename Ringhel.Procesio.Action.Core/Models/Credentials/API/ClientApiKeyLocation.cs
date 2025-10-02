@@ -1,9 +1,8 @@
-﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.API
+﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.API;
+
+public enum ClientApiKeyLocation
 {
-    public enum ClientApiKeyLocation
-    {
-        Header = 1,
-        Query = 2,
-        Both = 3,
-    }
+    Header = 1,
+    Query = 2,
+    Both = 3,
 }

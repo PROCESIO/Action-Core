@@ -1,8 +1,7 @@
-﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.FTP
+﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.FTP;
+
+public enum FTPFileTypes
 {
-    public enum FTPFileTypes
-    {
-        Files = 1,
-        Folders = 2
-    }
+    Files = 1,
+    Folders = 2
 }

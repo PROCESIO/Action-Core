@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.SMTP;
 
-namespace Ringhel.Procesio.Action.Core.Models.Credentials.SMTP
+public class BasicEmailInformation
 {
-    public class BasicEmailInformation
-    {
-        public int Id { get; set; }
-        public List<int> FileIndexes { get; set; } = new List<int>();
-        public string Subject { get; set; }
-        public string To { get; set; }
-        public string Cc { get; set; }
-        public string Bcc { get; set; }
-        public string Sender { get; set; }
-        public string Body { get; set; }
-        public string Status { get; set; }
-        public int Size { get; set; }
-        public DateTime SendDate { get; set; }
-        public string ImportanceLevel { get; set; }
-    }
+    public int Id { get; set; }
+    public List<int> FileIndexes { get; set; } = new List<int>();
+    public string Subject { get; set; }
+    public string To { get; set; }
+    public string Cc { get; set; }
+    public string Bcc { get; set; }
+    public string Sender { get; set; }
+    public string Body { get; set; }
+    public string Status { get; set; }
+    public int Size { get; set; }
+    public DateTime SendDate { get; set; }
+    public string ImportanceLevel { get; set; }
 }

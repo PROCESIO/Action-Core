@@ -1,7 +1,6 @@
-﻿namespace Ringhel.Procesio.Action.Core.Models
+﻿namespace Ringhel.Procesio.Action.Core.Models;
+
+public enum DbClientType
 {
-    public enum DbClientType
-    {
-        MSSQL = 1
-    }
+    MSSQL = 1
 }
