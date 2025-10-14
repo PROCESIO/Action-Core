@@ -3,6 +3,7 @@ public enum ControlEventType
 {
     OnLoad = 1,
     OnChange = 2,
-    //OnFocus = 3,
-    //OnBlur = 4,
+    OnClick = 3,
+    OnFocus = 4,
+    OnBlur = 5,
 }
