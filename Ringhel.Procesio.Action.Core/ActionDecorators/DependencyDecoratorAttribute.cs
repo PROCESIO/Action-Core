@@ -24,6 +24,12 @@ public class DependencyDecoratorAttribute : Attribute
     public Operator Operator { get; set; }
 
     /// <summary>
+    /// The logical operator to be used in the comparison
+    /// If missing, defaults to 'And'
+    /// </summary>
+    public LogicalOperator LogicalOperator { get; set; }
+
+    /// <summary>
     /// The value(s) to be compared with the dependency control value
     /// Can be a single value or an array of values
     /// </summary>
