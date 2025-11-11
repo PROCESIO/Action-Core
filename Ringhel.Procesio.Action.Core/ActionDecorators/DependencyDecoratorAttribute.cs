@@ -33,5 +33,5 @@ public class DependencyDecoratorAttribute : Attribute
     /// The value(s) to be compared with the dependency control value
     /// Can be a single value or an array of values
     /// </summary>
-    public object[] Value { get; set; }
+    public object Value { get; set; }
 }
