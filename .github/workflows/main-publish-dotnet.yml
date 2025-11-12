@@ -19,6 +19,12 @@ jobs:
           version="${GITHUB_REF#refs/tags/v}"
           echo "version=$version" >> $GITHUB_OUTPUT
 
+      - name: 📝 Update project version
+        run: |
+          version="${{ steps.get-version.outputs.version }}"
+          echo "🔧 Setting project version to $version"
+          sed -i "s|<Version>.*</Version>|<Version>${version}</Version>|" Ringhel.Procesio.Action.Core/Ringhel.Procesio.Action.Core.csproj
+
       - name: 🔧 Setup .NET SDK 8.0.105
         uses: actions/setup-dotnet@v4
         with:
