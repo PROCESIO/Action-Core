@@ -8,14 +8,14 @@
 		<Company>Ringhel</Company>
 		<Product>Procesio</Product>
 		<RepositoryUrl>https://github.com/PROCESIO/Action-Core.git</RepositoryUrl>
-		<Version>1.40.3</Version>
+		<Version>1.40.4</Version>
 		<AssemblyName>Ringhel.Procesio.Action.Core</AssemblyName>
 		<PackageId>Ringhel.Procesio.Action.Core</PackageId>
 		<RootNamespace>Ringhel.Procesio.Action.Core</RootNamespace>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 
 </Project>

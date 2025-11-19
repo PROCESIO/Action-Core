@@ -51,7 +51,22 @@ public class FEDecoratorAttribute : Attribute
     public int RowId { get; set; } = 0;
 
     /// <summary>
-    /// Tooltip property. 
+    /// Property Column number. Used to define the order/position of properties within the same row.
+    /// Properties with the same RowId will be ordered by their ColumnId value.
+    /// If not set, properties will be displayed on different rows.
+    /// </summary>
+    public int? ColumnId { get; set; }
+
+    /// <summary>
+    /// Property Column size. Used when displaying more than one property on the same row.
+    /// Uses a 12-column grid system where the sum of all ColumnSize values on the same row should equal 12.
+    /// For example: two properties can use sizes 3 and 9, or 6 and 6, or 4 and 8, etc.
+    /// If not set, properties sharing the same row will be split equally.
+    /// </summary>
+    public int? ColumnSize { get; set; }
+
+    /// <summary>
+    /// Tooltip property.
     /// </summary>
     public string Tooltip { get; set; }
 
