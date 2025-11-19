@@ -55,7 +55,7 @@ public class FEDecoratorAttribute : Attribute
     /// Properties with the same RowId will be ordered by their ColumnId value.
     /// If not set, properties will be displayed on different rows.
     /// </summary>
-    public int? ColumnId { get; set; }
+    public int ColumnId { get; set; } = 0;
 
     /// <summary>
     /// Property Column size. Used when displaying more than one property on the same row.
@@ -63,7 +63,7 @@ public class FEDecoratorAttribute : Attribute
     /// For example: two properties can use sizes 3 and 9, or 6 and 6, or 4 and 8, etc.
     /// If not set, properties sharing the same row will be split equally.
     /// </summary>
-    public int? ColumnSize { get; set; }
+    public int ColumnSize { get; set; } = 0;
 
     /// <summary>
     /// Tooltip property.
