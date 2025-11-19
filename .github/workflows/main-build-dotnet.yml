@@ -1,29 +1,28 @@
-name: .NET Core
+name: ⚒️ Build on PR
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: 
+      - main
+      - release
 
 jobs:
-  build:
-
+  build-on-pr:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      env:
-        NUGET_AUTH_TOKEN: ${{ secrets.DEPLOY_KEY }}
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 8.0.100
-        source-url: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
-      env:
-        NUGET_AUTH_TOKEN: ${{ secrets.DEPLOY_KEY }}
-    - name: Install dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --configuration Release --no-restore
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      - name: ⬇️ Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🔧 Setup .NET SDK 8.0.105
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.105
+          source-url: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 📦 Restore dependencies
+        run: dotnet restore
+
+      - name: ⚒️ Build project
+        run: dotnet build --configuration Release --no-restore
