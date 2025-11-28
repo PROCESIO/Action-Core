@@ -7,5 +7,7 @@ public enum FeTextFormat
     JSON = 2,
     SQL = 3,
     HTML = 4,
-    JAVASCRIPT = 5
+    JAVASCRIPT = 5,
+    PYTHON = 6,
+    RUBY = 7
 }
