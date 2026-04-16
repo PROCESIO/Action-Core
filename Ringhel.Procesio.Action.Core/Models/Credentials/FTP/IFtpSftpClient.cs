@@ -12,7 +12,7 @@ public interface IFtpSftpClient
     /// <param name="isRecursive">Whether to list contents recursively.</param>
     /// <param name="type">The type of items to list (e.g., files or folders).</param>
     /// <param name="useDefaultBaseFolder">Whether to use the default Credential base folder as the root.</param>
-    Task<List<FTPFilesInformations>> ListFileNamesWithinFolder(string directoryPath, bool isRecursive, string type, bool useDefaultBaseFolder = false);
+    Task<List<FTPFilesInformations>> ListFileNamesWithinFolder(string directoryPath, bool isRecursive, string type, bool useDefaultBaseFolder = false, int maxFileNr = 0);
 
     /// <summary>
     /// Renames a file or folder.
