@@ -1,6 +1,4 @@
-﻿using Ringhel.Procesio.Action.Core.Models.Credentials.API;
-
-namespace Ringhel.Procesio.Action.Core.Models.Credentials.AI_API;
+﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.API;
 
 public class AiCredentialManager
 {

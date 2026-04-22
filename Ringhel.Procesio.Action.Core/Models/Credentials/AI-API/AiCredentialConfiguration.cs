@@ -1,4 +1,4 @@
-﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.AI_API;
+﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.API;
 
 /// <summary>
 /// Holds the configuration required to connect to and interact with an AI API provider.

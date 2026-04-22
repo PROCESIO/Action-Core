@@ -1,4 +1,4 @@
-﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.AI_API;
+﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.API;
 
 /// <summary>
 /// Defines the strategy used by an AI provider to enforce structured (JSON schema) output.
