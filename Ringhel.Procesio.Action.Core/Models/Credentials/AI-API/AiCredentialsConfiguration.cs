@@ -3,7 +3,7 @@
 /// <summary>
 /// Holds the configuration required to connect to and interact with an AI API provider.
 /// </summary>
-public class AiCredentialConfiguration
+public class AiCredentialsConfiguration
 {
     /// <summary>
     /// The base URL of the AI API provider (e.g., <c>https://api.openai.com</c>).

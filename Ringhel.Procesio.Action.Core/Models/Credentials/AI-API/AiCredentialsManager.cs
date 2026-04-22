@@ -1,7 +1,7 @@
 ﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.API;
 
-public class AiCredentialManager
+public class AiCredentialsManager
 {
-    public AiCredentialConfiguration CredentialConfig { get; set; }
+    public AiCredentialsConfiguration CredentialConfig { get; set; }
     public IHttpClient Client { get; set; }
 }
