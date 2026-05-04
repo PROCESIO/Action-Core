@@ -52,6 +52,9 @@ public enum FeComponentType
     Form_Template = 42,
     Map_Parameters = 43,
 
+    Ai_Decisional_Case = 44,
+    Credentials_Ai = 45,
+
     Ignore = 100,
     Any = 101,
 }
