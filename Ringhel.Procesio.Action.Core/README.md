@@ -1,6 +1,6 @@
 # Ringhel.Procesio.Action.Core
 
-> Part of the [Action-Core](../AGENTS.md) microservice. See [AGENTS.md](../AGENTS.md) for the canonical architectural context.
+> Part of the Action-Core repository. See [AGENTS.md](../AGENTS.md) for the canonical architectural context.
 
 ## Role
 This is the sole project in the repo and the body of the NuGet package `Ringhel.Procesio.Action.Core` (`net8.0`, root namespace `Ringhel.Procesio.Action.Core`). It defines the **contract surface** for PROCESIO Actions: the `IAction` interface every action must implement, the `CustomErrorException` standardized error type, the metadata `*Attribute` decorators that drive the designer UI and validation, the shared model types (files, HTTP request shapes, per-integration credential managers, AI/LLM payloads), and the platform-wide enums (`ActionShape`, `Direction`, `ExpectedType`, etc.). It ships **no executable actions** — concrete `IAction` implementations live in Process-Execution; this library only describes their shape and is consumed as a NuGet dependency by Web-Api, Action-Execution, and Process-Execution.

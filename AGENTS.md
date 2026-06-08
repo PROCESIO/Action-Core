@@ -110,7 +110,7 @@ You need access to the `PROCESIO` GitHub Packages feed if any transitive package
 
 ## 7. Conventions
 
-- File-scoped namespaces are not yet used everywhere — match the surrounding file's style.
+- File-scoped namespaces are used throughout the codebase — keep using them for new files (and otherwise match the surrounding file's style).
 - `ImplicitUsings` is **enabled** in the csproj, so common namespaces (`System`, `System.Collections.Generic`, etc.) don't need explicit `using` statements.
 - The `TemplateAction/CustomTemplateAction.cs` sample is the reference for how a real action should be annotated. Keep it in sync if you introduce new decorators.
 - `.editorconfig` at the repo root governs formatting — respect it.
