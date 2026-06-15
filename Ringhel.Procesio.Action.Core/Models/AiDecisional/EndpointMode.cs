@@ -9,11 +9,11 @@ public enum EndpointMode
     /// <c>POST {base_url}/chat/completions</c> — uses <c>messages[]</c> input shape and
     /// <c>max_completion_tokens</c> for the token cap parameter.
     /// </summary>
-    ChatCompletions = 0,
+    ChatCompletions = 1,
 
     /// <summary>
     /// <c>POST {base_url}/responses</c> — uses <c>input[]</c> shape and
     /// <c>max_output_tokens</c> for the token cap parameter.
     /// </summary>
-    Responses = 1
+    Responses = 2
 }
