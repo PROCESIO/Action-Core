@@ -2,5 +2,6 @@
 
 public enum DbClientType
 {
-    MSSQL = 1
+    MSSQL = 1,
+    MYSQL = 2
 }
