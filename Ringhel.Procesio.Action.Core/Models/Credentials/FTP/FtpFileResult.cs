@@ -1,4 +1,4 @@
-﻿namespace Ringhel.Procesio.Action.Core.Models;
+﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.FTP;
 
 public class FtpFileResult
 {

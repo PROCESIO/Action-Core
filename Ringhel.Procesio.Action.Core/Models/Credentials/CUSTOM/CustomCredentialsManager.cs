@@ -1,4 +1,4 @@
-﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials;
+﻿namespace Ringhel.Procesio.Action.Core.Models.Credentials.CUSTOM;
 
 public class CustomCredentialsManager
 {

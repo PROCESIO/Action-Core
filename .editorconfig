@@ -13,13 +13,15 @@ tab_width = 4
 
 # New line preferences
 end_of_line = crlf
-insert_final_newline = false
+trim_trailing_whitespace = true:suggestion
+insert_final_newline = true
 
 #### .NET Coding Conventions ####
 
 # Organize usings
 dotnet_separate_import_directive_groups = false
 dotnet_sort_system_directives_first = false
+dotnet_remove_unnecessary_usings = true:suggestion
 file_header_template = 
 
 # this. and Me. preferences
@@ -42,11 +44,11 @@ dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity:sug
 dotnet_style_require_accessibility_modifiers = for_non_interface_members
 
 # Expression-level preferences
-dotnet_style_coalesce_expression = true
+dotnet_style_coalesce_expression = true:suggestion
 dotnet_style_collection_initializer = true
 dotnet_style_explicit_tuple_names = true
-dotnet_style_namespace_match_folder = true
-dotnet_style_null_propagation = true
+dotnet_style_namespace_match_folder = true:suggestion
+dotnet_style_null_propagation = true:suggestion
 dotnet_style_object_initializer = true
 dotnet_style_operator_placement_when_wrapping = beginning_of_line
 dotnet_style_prefer_auto_properties = true:suggestion
@@ -111,7 +113,7 @@ csharp_prefer_braces = true
 csharp_prefer_simple_using_statement = true
 csharp_style_namespace_declarations = file_scoped
 csharp_style_prefer_method_group_conversion = true
-csharp_style_prefer_top_level_statements = true
+csharp_style_prefer_top_level_statements = false
 
 # Expression-level preferences
 csharp_prefer_simple_default_expression = true
@@ -227,3 +229,6 @@ dotnet_naming_style.begins_with_i.capitalization = pascal_case
 
 # ReSharper properties
 resharper_wrap_after_declaration_lpar = true
+
+# Set the code style for constructors to prefer explicit constructors
+dotnet_diagnostic.IDE0290.severity = none

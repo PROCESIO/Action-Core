@@ -55,6 +55,9 @@ public enum FeComponentType
     Ai_Decisional_Case = 44,
     Credentials_Ai = 45,
 
+    Data_Store_Mapper = 46,
+    Data_Store_Decisional = 47,
+
     Ignore = 100,
     Any = 101,
 }
