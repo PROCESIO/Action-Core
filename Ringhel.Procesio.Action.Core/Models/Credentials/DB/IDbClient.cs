@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace Ringhel.Procesio.Action.Core.Models;
+namespace Ringhel.Procesio.Action.Core.Models.Credentials.DB;
 
 public interface IDbClient
 {
