@@ -9,5 +9,6 @@ public enum FeTextFormat
     HTML = 4,
     JAVASCRIPT = 5,
     PYTHON = 6,
-    RUBY = 7
+    RUBY = 7,
+    DATASTORE = 8,
 }
