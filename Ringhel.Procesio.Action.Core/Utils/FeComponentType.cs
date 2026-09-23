@@ -60,4 +60,5 @@ public enum FeComponentType
 
     Ignore = 100,
     Any = 101,
+    Auto = 102,
 }
