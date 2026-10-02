@@ -25,10 +25,10 @@ jobs:
           echo "🔧 Setting project version to $version"
           sed -i "s|<Version>.*</Version>|<Version>${version}</Version>|" Ringhel.Procesio.Action.Core/Ringhel.Procesio.Action.Core.csproj
 
-      - name: 🔧 Setup .NET SDK 8.0.105
+      - name: 🔧 Setup .NET SDK 10.0.400
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0.105
+          dotnet-version: 10.0.400
           source-url: https://nuget.pkg.github.com/PROCESIO/index.json
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
