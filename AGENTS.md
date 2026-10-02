@@ -6,12 +6,12 @@ This file is the canonical entry point for any AI agent working in this reposito
 
 ## 1. What this repo is
 
-**Action-Core** ships the NuGet package **`Ringhel.Procesio.Action.Core`** — a .NET 8 C# class library that defines the **contracts, metadata attributes, and helper types** used to build PROCESIO Actions (units of automated logic) on the PROCESIO platform.
+**Action-Core** ships the NuGet package **`Ringhel.Procesio.Action.Core`** — a C# class library for .NET 8 and .NET 10 that defines the **contracts, metadata attributes, and helper types** used to build PROCESIO Actions (units of automated logic) on the PROCESIO platform.
 
 This repo contains **no executable actions**. It only defines the shape that real actions must implement. Real action implementations live in the **Process-Execution** service.
 
 - **Package ID:** `Ringhel.Procesio.Action.Core`
-- **Target framework:** `net8.0`
+- **Target frameworks:** `net8.0` and `net10.0` — the `net8.0` build keeps custom actions that are still on .NET 8 able to take new versions
 - **Root namespace:** `Ringhel.Procesio.Action.Core`
 - **Sole runtime dependency:** `Newtonsoft.Json` 13.0.3
 - **Distribution:** GitHub Packages NuGet feed (`https://nuget.pkg.github.com/PROCESIO/index.json`)
