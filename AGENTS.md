@@ -13,7 +13,7 @@ This repo contains **no executable actions**. It only defines the shape that rea
 - **Package ID:** `Ringhel.Procesio.Action.Core`
 - **Target frameworks:** `net8.0` and `net10.0` — the `net8.0` build keeps custom actions that are still on .NET 8 able to take new versions
 - **Root namespace:** `Ringhel.Procesio.Action.Core`
-- **Sole runtime dependency:** `Newtonsoft.Json` 13.0.3
+- **Sole runtime dependency:** `Newtonsoft.Json` 13.0.4
 - **Distribution:** GitHub Packages NuGet feed (`https://nuget.pkg.github.com/PROCESIO/index.json`)
 
 ## 2. Position in the PROCESIO ecosystem
