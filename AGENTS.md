@@ -13,20 +13,21 @@ This repo contains **no executable actions**. It only defines the shape that rea
 - **Package ID:** `Ringhel.Procesio.Action.Core`
 - **Target frameworks:** `net8.0` and `net10.0` — the `net8.0` build keeps custom actions that are still on .NET 8 able to take new versions
 - **Root namespace:** `Ringhel.Procesio.Action.Core`
-- **Sole runtime dependency:** `Newtonsoft.Json` 13.0.3
+- **Sole runtime dependency:** `Newtonsoft.Json` 13.0.4
 - **Distribution:** GitHub Packages NuGet feed (`https://nuget.pkg.github.com/PROCESIO/index.json`)
 
 ## 2. Position in the PROCESIO ecosystem
 
-This package is **consumed as a NuGet dependency** by three downstream services in the PROCESIO workspace:
+This package is **consumed as a NuGet dependency** by four downstream services in the PROCESIO workspace:
 
 | Consumer service       | What it uses Action-Core for                                                                |
 | ---------------------- | ------------------------------------------------------------------------------------------- |
 | **Web-Api**            | Reads action metadata (decorators) to drive the designer UI and validate configurations.    |
 | **Action-Execution**   | Uses the `IAction` contract and credential/model types to run actions.                      |
 | **Process-Execution**  | Hosts the **concrete action implementations** that derive from this library's abstractions. |
+| **Test-Action**        | Uses the `OutputTarget` enum in its connector-action DTOs.                                  |
 
-> If you change a public type in this repo, the blast radius reaches all three services above. See §5 for the change policy.
+> If you change a public type in this repo, the blast radius reaches all four services above. See §5 for the change policy.
 
 ## 3. Project layout
 
@@ -87,7 +88,7 @@ You need access to the `PROCESIO` GitHub Packages feed if any transitive package
 
 ## 5. Change policy (READ BEFORE EDITING)
 
-1. **Avoid breaking changes when reasonable.** This library is the contract surface for Web-Api, Action-Execution, and Process-Execution. A breaking change forces a coordinated rollout across all three.
+1. **Avoid breaking changes when reasonable.** This library is the contract surface for Web-Api, Action-Execution, Process-Execution and Test-Action. A breaking change forces a coordinated rollout across all four.
 2. **Breaking changes ARE permitted when justified** — the team can absorb a major version bump. If you must break, say so explicitly in the PR description and call out which consumer services need follow-up.
 3. **Semver intent:**
    - Patch (`v1.2.x`) — bug fixes, internal-only changes, new optional metadata.
@@ -106,7 +107,7 @@ You need access to the `PROCESIO` GitHub Packages feed if any transitive package
 | Add a reusable model used across many actions               | `Models/`                                                              |
 | Change how an action is executed                            | **Wrong repo.** Go to **Process-Execution** — that's where `IAction` implementations live. |
 | Change how the designer renders an action                   | Likely **Web-Api** (reads metadata) and/or the front-end repo.         |
-| Change the `IAction` interface itself                       | Here, but coordinate with all three consumers (§2) and bump major.     |
+| Change the `IAction` interface itself                       | Here, but coordinate with all four consumers (§2) and bump major.     |
 
 ## 7. Conventions
 
