@@ -56,6 +56,7 @@ Ringhel.Procesio.Action.Core.sln
     │   │   ├── SMTP/        email
     │   │   ├── FTP/         file transfer
     │   │   ├── AI-API/      LLM endpoints
+    │   │   ├── AZURE_STORAGE/ Azure Blob Storage
     │   │   └── CUSTOM/      custom connectors
     │   └── AiDecisional/                         ← LLM response & endpoint mode models
     ├── Utils/                                    ← platform-wide enums (ActionShape, Direction,
