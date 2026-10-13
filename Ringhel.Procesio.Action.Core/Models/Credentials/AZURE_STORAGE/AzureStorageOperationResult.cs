@@ -16,7 +16,7 @@ public sealed class AzureStorageOperationResult
     /// <summary>Content of the downloaded blob.</summary>
     public FileModel? OutputFile { get; init; }
 
-    /// <summary>Blob or container names returned by the list and bulk delete operations.</summary>
+    /// <summary>Blob or container names returned by the list operations.</summary>
     public IList<string>? Names { get; init; }
 
     /// <summary>Structured, operation-specific payload such as <see cref="AzureStorageBlobDetails"/> or <see cref="AzureStorageContainerDetails"/>.</summary>
