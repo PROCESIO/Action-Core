@@ -14,7 +14,7 @@ public interface IAzureStorageClient
     Task<AzureStorageOperationResult> DownloadBlob(string container, string blobName);
     Task<AzureStorageOperationResult> BlobExists(string container, string blobName);
     Task<AzureStorageOperationResult> GetBlobProperties(string container, string blobName);
-    Task<AzureStorageOperationResult> ListBlobs(string container, string? prefix, int maxResults);
+    Task<AzureStorageOperationResult> ListBlobs(string container, string? prefix);
     Task<AzureStorageOperationResult> DeleteBlob(string container, string blobName);
     Task<AzureStorageOperationResult> DeleteBlobsByNames(string container, IList<string> blobNames);
     Task<AzureStorageOperationResult> DeleteBlobsByPrefix(string container, string prefix);
@@ -28,7 +28,7 @@ public interface IAzureStorageClient
     Task<AzureStorageOperationResult> CreateContainer(string container);
     Task<AzureStorageOperationResult> DeleteContainer(string container);
     Task<AzureStorageOperationResult> GetContainer(string container);
-    Task<AzureStorageOperationResult> ListContainers(string? prefix, int maxResults);
+    Task<AzureStorageOperationResult> ListContainers(string? prefix);
 
     #endregion
 }
