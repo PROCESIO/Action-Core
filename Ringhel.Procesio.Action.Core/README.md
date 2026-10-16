@@ -9,7 +9,7 @@ This is the sole project in the repo and the body of the NuGet package `Ringhel.
 - `IAction.cs` — the interface every PROCESIO action implements
 - `CustomErrorException.cs` — standardized exception carrying an `int` error code
 - `ActionDecorators/` — metadata attributes (`ClassDecorator`, `FEDecorator`, `FETabDecorator`, `BEDecorator`, `Validator`, `Permissions`, `DependencyDecorator`, `ControlEventHandler`, `ActionEventHandler`) that the designer and validators read via reflection
-- `Models/` — shared types: `OptionModel`, `FileModel` / `FileContent`, `CallApi/` HTTP shapes, `Credentials/` managers split by integration kind (`API`, `DB`, `SMTP`, `FTP`, `AI-API`, `CUSTOM`), and `AiDecisional/` LLM payloads
+- `Models/` — shared types: `OptionModel`, `FileModel` / `FileContent`, `CallApi/` HTTP shapes, `Credentials/` managers split by integration kind (`API`, `DB`, `SMTP`, `FTP`, `AI_API`, `CUSTOM`), and `AiDecisional/` LLM payloads
 - `Utils/` — platform-wide enums (`ActionShape`, `Direction`, `ExpectedType`, `FeComponentType`, `LogicalOperator`, ...)
 - `TemplateAction/CustomTemplateAction.cs` — reference example showing how an action should be annotated; **not** wired into any execution path
 
