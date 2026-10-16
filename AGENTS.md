@@ -55,7 +55,7 @@ Ringhel.Procesio.Action.Core.sln
     │   │   ├── DB/          databases
     │   │   ├── SMTP/        email
     │   │   ├── FTP/         file transfer
-    │   │   ├── AI-API/      LLM endpoints
+    │   │   ├── AI_API/      LLM endpoints
     │   │   ├── AZURE_STORAGE/ Azure Blob Storage
     │   │   └── CUSTOM/      custom connectors
     │   └── AiDecisional/                         ← LLM response & endpoint mode models
