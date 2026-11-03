@@ -27,7 +27,8 @@ Metadata attributes in `ActionDecorators/` describe how actions behave in both t
   Configures **front-end presentation**:
   - Tabs, labels, and component types  
   - Option lists and validation ranges  
-  - Credential bindings and UI layout
+  - Credential bindings and UI layout  
+  - Credential defaults (`CredentialDefaults`): non-secret values, keyed by the credential template's `be_id`, that prefill the New Credential form opened from the property, plus a connector type that labels and filters the credentials. The shape and the rules are in `AGENTS.md` §3.
 
 - **`BEDecoratorAttribute`**  
   Specifies if a property acts as an **input** or **output** during execution.

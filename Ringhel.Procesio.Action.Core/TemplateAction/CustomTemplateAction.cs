@@ -1,6 +1,7 @@
 ﻿using Ringhel.Procesio.Action.Core;
 using Ringhel.Procesio.Action.Core.ActionDecorators;
 using Ringhel.Procesio.Action.Core.Models;
+using Ringhel.Procesio.Action.Core.Models.Credentials.API;
 using Ringhel.Procesio.Action.Core.Utils;
 
 namespace Ringhel.Procesio.Action.Core.TemplateAction;
@@ -14,6 +15,14 @@ public class MyCustomAction : IAction
     #region Options
     private const string ConfigP1Options = "[{\"name\":\"1\",\"value\":\"1\"},{\"name\":\"2\",\"value\":\"2\"},{\"name\":\"3\",\"value\":\"3\"}]";
     private const string ConfigP2Options = "[{\"name\":\"my name3\",\"value\":\"my name value 3\"},{\"name\":\"my name4\",\"value\":\"my name value 4\"}]";
+
+    /// <summary>
+    /// Non-secret values that prefill the New Credential form opened from the ApiCredentials property.
+    /// Keys under "properties" are the REST API credential template be_id values; "connectorType" becomes the
+    /// credential label and filters the credential dropdown. Never put a password, an API key value or a client
+    /// secret here: the upload is refused for a protected key.
+    /// </summary>
+    private const string RestCredentialDefaults = "{\"connectorType\":\"Sample\",\"properties\":{\"URL\":\"https://api.example.com\",\"AuthenticationMethod\":\"OAuth2\",\"Scopes\":[\"read\"],\"AuthorizationUrl\":\"https://auth.example.com/authorize\",\"AccessTokenUrl\":\"https://auth.example.com/token\",\"ClientId\":\"public-client-id\"}}";
 
     private IEnumerable<OptionModel> ConfigP1OptionsList { get; } = new List<OptionModel>()
     {
@@ -97,6 +106,17 @@ public class MyCustomAction : IAction
     //[BEDecorator(IOProperty = Direction.Input)]
     //[Validator(IsRequired = false)]
     //public IEnumerable<JObject> CustomTypeList { get; set; }
+    #endregion
+
+    #region Credentials
+    /// <summary>
+    /// A REST credential. CredentialDefaults names the const string that prefills the New Credential form;
+    /// a JSON literal works too. The user can change every prefilled value.
+    /// </summary>
+    [FEDecorator(Label = "API credential", Type = FeComponentType.Credentials_Rest, Tab = "Input Tab", RowId = 6, CredentialDefaults = nameof(RestCredentialDefaults))]
+    [BEDecorator(IOProperty = Direction.Input)]
+    [Validator(IsRequired = false)]
+    public APICredentialsManager ApiCredentials { get; set; }
     #endregion
 
     #endregion
