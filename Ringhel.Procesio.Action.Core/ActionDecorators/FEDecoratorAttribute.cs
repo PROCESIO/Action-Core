@@ -85,4 +85,29 @@ public class FEDecoratorAttribute : Attribute
     /// The Guid can be taken from the panel when creating an instance of the CustomCredentialType
     /// </summary>
     public string CustomCredentialsTypeGuid { get; set; }
+
+    /// <summary>
+    /// Credential components only. Values that prefill the New Credential form when the user presses
+    /// Create Credential on this property in the designer. The user can still change every value.
+    /// A JSON object, written as a literal or as the nameof of a const string field on the action:
+    /// <code>
+    /// {
+    ///   "connectorType": "HubSpot",
+    ///   "properties": {
+    ///     "URL": "https://api.hubapi.com",
+    ///     "AuthenticationMethod": "OAuth2",
+    ///     "Scopes": ["crm.objects.contacts.read"]
+    ///   }
+    /// }
+    /// </code>
+    /// connectorType (optional, 1 to 50 characters) becomes the label of a credential created from this property,
+    /// and the credential dropdown then lists only credentials that carry that label.
+    /// The keys under properties are the be_id values of the credential template's fields; a radio or select is
+    /// set by the option's be_value. A value is a string, a number, a boolean, or an array of strings. The whole
+    /// JSON is at most 4096 characters.
+    /// Never put a secret here (a password, an API key value, a client secret, a certificate password): the value
+    /// is stored and served unencrypted with the action template, and the upload is refused for a protected key.
+    /// The platform computes OAuthRedirectUrl from the new credential, so a default for it is ignored.
+    /// </summary>
+    public string CredentialDefaults { get; set; }
 }
