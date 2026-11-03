@@ -97,4 +97,17 @@ public interface IHttpClient
     /// </summary>
     /// <param name="secondsTimeOut">Timeout in seconds</param>
     void SetTimeOut(int secondsTimeOut);
+
+    /// <summary>
+    /// Replace the base URL (scheme, host, port and base path) that every later request is built on.
+    /// Query pairs on the URL are added to the client's query parameters; pairs the credential already
+    /// supplies win. Header parameters and the authorization configuration are kept, so the credential's
+    /// token, API key or basic authentication is sent to the new host. Pass relative endpoints afterwards.
+    /// The stored credential is not changed.
+    /// </summary>
+    /// <param name="baseUrl">An absolute http or https URL.</param>
+    /// <exception cref="ArgumentException">The URL is null, empty, relative or not http or https.</exception>
+    /// <exception cref="NotSupportedException">The client does not support changing the base URL.</exception>
+    void SetBaseUrl(string baseUrl) =>
+        throw new NotSupportedException("This HTTP client does not support changing the base URL.");
 }
