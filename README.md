@@ -72,6 +72,8 @@ Separate managers exist for different integration types:
 
 Each encapsulates authentication and connection logic, giving actions secure and reusable access to external systems.
 
+The REST manager can be re-pointed at run time: `APICredentialsManager.SetBaseUrl` (and `IHttpClient.SetBaseUrl` on the injected client) replaces the scheme, host, port and base path that every later request is built on, keeps the credential's authorization and headers, and leaves the stored credential untouched. It accepts only an absolute `http` or `https` URL and can be called again to switch host. Both members are additive and ship in version 2.2.0; see `AGENTS.md` §3 for the rules.
+
 ### VI. Utilities and Enumerations
 
 `Utils/` contains enums and constants that encode **platform-wide vocabularies**, such as:

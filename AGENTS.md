@@ -65,6 +65,12 @@ Ringhel.Procesio.Action.Core.sln
         └── CustomTemplateAction.cs               ← reference example, NOT a real action
 ```
 
+### Runtime base-URL override on the REST credential (`Models/Credentials/API/`)
+
+`APICredentialsManager.SetBaseUrl(string baseUrl)` and `IHttpClient.SetBaseUrl(string baseUrl)` let an action point the REST credential it received at another host before it issues requests. The manager updates `CredentialConfig` (`Schema`, `Host`, `Port`, `Path`) and forwards the URL to `Client`, so the two never disagree; the client replaces the scheme, host, port and base path that every later request is built on. Everything else is kept: the authorization (bearer token, API key or basic authentication), the header parameters, and the stored credential, which is never changed. Query pairs on the new URL are added without overwriting pairs the credential already supplies. Only an absolute `http` or `https` URL is accepted; anything else throws `ArgumentException`. The override can be called again to switch host, so two products of one vendor can share one credential, and the endpoints passed afterwards should be relative. Because the authorization follows the credential to the new host, point a credential only at hosts that may see it.
+
+`IHttpClient.SetBaseUrl` is a default interface member whose default throws `NotSupportedException` — the first default member on this interface. The default keeps every existing implementer compiling, including hand-written fakes in consumer tests and in custom-action test projects. Both members are additive, so they ship in the minor release `2.2.0`; an action compiled against an older package cannot reach them.
+
 ## 4. Build, version, and publish flow
 
 ### CI workflows (`.github/workflows/`)
