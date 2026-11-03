@@ -71,6 +71,25 @@ Ringhel.Procesio.Action.Core.sln
 
 `IHttpClient.SetBaseUrl` is a default interface member whose default throws `NotSupportedException` — the first default member on this interface. The default keeps every existing implementer compiling, including hand-written fakes in consumer tests and in custom-action test projects. Both members are additive, so they ship in the minor release `2.2.0`; an action compiled against an older package cannot reach them.
 
+### Credential defaults on a credential property (`FEDecoratorAttribute.CredentialDefaults`)
+
+`FEDecoratorAttribute.CredentialDefaults` is allowed on credential components only (`FeComponentType.Credentials_*`). It holds a JSON object, written as a literal or as the `nameof` of a `const string` field on the action (the convention `Options` already uses):
+
+```jsonc
+{
+  "connectorType": "HubSpot",
+  "properties": { "URL": "https://api.hubapi.com", "AuthenticationMethod": "OAuth2", "Scopes": ["crm.objects.contacts.read"] }
+}
+```
+
+- The keys under `properties` are the `be_id` values of the credential template's fields; a radio or select is set by the option's `be_value`. A value is a string, a number, a boolean, or an array of strings. The whole JSON is at most 4096 characters.
+- `connectorType` (optional, 1 to 50 characters) becomes the label of a credential created from the property, and the designer's credential dropdown then lists only credentials that carry that label.
+- The values prefill the New Credential form when the user presses **Create Credential** on the property; every value stays editable.
+- Never put a secret here (a password, an API key value, a client secret, a certificate password): the value is stored and served unencrypted with the action template, and Web-Api refuses the upload for a protected key.
+- The platform computes `OAuthRedirectUrl` from the new credential, so a default for it is ignored.
+
+Web-Api reads the member by its string name at upload, so a package built against an older Action-Core resolves the same way. The member is additive, so it ships in the minor release `2.2.0`. The per-type `be_id` key reference for every credential template is in the connectors skill of the ai-ready workspace, `BE/.features/connectors/SKILL.md`. `TemplateAction/CustomTemplateAction.cs` shows the `nameof` form on its `ApiCredentials` property.
+
 ## 4. Build, version, and publish flow
 
 ### CI workflows (`.github/workflows/`)
